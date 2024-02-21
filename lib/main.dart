@@ -20,31 +20,26 @@ class MyApp extends StatelessWidget {
             // determines how to order children. down is default, top to bottom
             verticalDirection: VerticalDirection.down,
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
                 height: 100,
-                width: 100,
                 margin: const EdgeInsets.only(top: 10, bottom: 10),
                 color: Colors.white,
                 child: const Text('Container 1'),
               ),
               Container(
                 height: 100,
-                width: 100,
                 margin: const EdgeInsets.only(top: 10, bottom: 10),
                 color: Colors.blue,
                 child: const Text('Container 2'),
               ),
               Container(
                 height: 100,
-                width: 100,
                 margin: const EdgeInsets.only(top: 10, bottom: 10),
                 color: Colors.red,
                 child: const Text('Container 3'),
               ),
-              Container(
-                width: double.infinity,
-              )
             ],
           ),
         ),
