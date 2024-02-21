@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(
             // main axis size basically says cover entire vertical height or just height of children
@@ -22,23 +22,58 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Container(
-                height: 100,
-                margin: const EdgeInsets.only(top: 10, bottom: 10),
-                color: Colors.white,
-                child: const Text('Container 1'),
+              const CircleAvatar(
+                radius: 90,
+                backgroundColor: Colors.blue,
+                backgroundImage: AssetImage(
+                  'images/logo-black.png',
+                ),
+              ),
+              const Center(
+                child: Text(
+                  'Fanan Dala',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Tanker',
+                  ),
+                ),
+              ),
+              const Center(
+                child: Text(
+                  'Learning Flutter',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
               ),
               Container(
-                height: 100,
-                margin: const EdgeInsets.only(top: 10, bottom: 10),
+                padding: const EdgeInsets.all(10),
+                margin: const EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 25,
+                ),
                 color: Colors.blue,
-                child: const Text('Container 2'),
-              ),
-              Container(
-                height: 100,
-                margin: const EdgeInsets.only(top: 10, bottom: 10),
-                color: Colors.red,
-                child: const Text('Container 3'),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      size: 20,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '+44-94-iwo-ma-fo',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
