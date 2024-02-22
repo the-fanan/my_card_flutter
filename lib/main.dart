@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.white,
         body: SafeArea(
@@ -20,16 +20,16 @@ class MyApp extends StatelessWidget {
             // determines how to order children. down is default, top to bottom
             verticalDirection: VerticalDirection.down,
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const CircleAvatar(
+              CircleAvatar(
                 radius: 90,
                 backgroundColor: Colors.blue,
                 backgroundImage: AssetImage(
                   'images/logo-black.png',
                 ),
               ),
-              const Center(
+              Center(
                 child: Text(
                   'Fanan Dala',
                   style: TextStyle(
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              const Center(
+              Center(
                 child: Text(
                   'Learning Flutter',
                   style: TextStyle(
@@ -47,32 +47,61 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.all(10),
-                margin: const EdgeInsets.symmetric(
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.blue,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 25,
                 ),
                 color: Colors.blue,
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      size: 20,
+                child: Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        size: 20,
+                        color: Colors.white,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        '+44-94-iwo-ma-fo',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 25,
+                ),
+                color: Colors.blue,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    '+44-94-iwo-ma-fo',
+                    style: TextStyle(
+                      fontSize: 20,
                       color: Colors.white,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      '+44-94-iwo-ma-fo',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
